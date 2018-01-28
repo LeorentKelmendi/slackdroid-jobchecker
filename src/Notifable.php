@@ -9,7 +9,7 @@ class Notifable
 
     public function routeNotificationForSlack(): string
     {
-        return 'https://hooks.slack.com/services/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';
+        return config('boot-job-monitor.slack');
     }
 
 }

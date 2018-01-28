@@ -1,8 +1,8 @@
 {
     "name": "leorent/slackdroid",
     "description": "Slack boot to send a notification to a slack web-hook whenever a job fails.",
-     "keywords": ["library", "failed", "jobs", "slack", "notification", "queue"],
-     "license": "MIT",
+    "keywords": ["library", "failed", "jobs", "slack", "notification", "queue"],
+    "license": "MIT",
     "authors": [
         {
             "name": "Leorent Kelmendi",
