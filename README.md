@@ -11,7 +11,7 @@ This package sends notifications to a slack web-hook if a queued job fails. It l
 You can install the package via composer:
 
 ``` bash
-composer require
+composer require leorent/slackdroid
 ```
 In order to use slack notification you must install guzzle first.
 
