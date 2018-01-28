@@ -31,7 +31,7 @@ After vendor publish a new file will be generated under `config` folder, named `
 
 ```?php
 /*
- * The channels web-hook to which the notification will be sent.
+ * The channel web-hook to which the notification will be sent.
  */
 return [
 
@@ -41,7 +41,6 @@ return [
 
 ]
 
-?>
 ```
 
 ## Configuration
