@@ -19,8 +19,9 @@
 
       },
     "autoload":{
-
-        "Leo\\DroidJobMonitor":"src/"
+        "psr-4": {
+             "Leo\\DroidJobMonitor\\":"src/"
+        }
     },
    "extra": {
     "laravel": {
