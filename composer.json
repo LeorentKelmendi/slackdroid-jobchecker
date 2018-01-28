@@ -1,6 +1,13 @@
 {
     "autoload":{
 
-        "Leo\\DroidJobMonitor":"src"
+        "Leo\\DroidJobMonitor":"src/"
+    },
+   "extra": {
+    "laravel": {
+        "providers": [
+            "Leo\\DroidJobMonitor\\BootJobMonitorServiceProvider"
+        ],
+
     }
 }

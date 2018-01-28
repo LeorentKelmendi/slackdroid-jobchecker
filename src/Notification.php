@@ -1,44 +1,57 @@
 <?php
 
 namespace Leo\DroidJobMonitor;
-use Illuminate\Notifications\Notification;
+
 use Illuminate\Bus\Queueable;
-use Illuminate\Queue\Events\JobFailed;
-use Illuminate\Notifications\Messages\SlackAttachment;
 use Illuminate\Notifications\Messages\SlackMessage;
+use Illuminate\Notifications\Notification as LaravelNotification;
+use Illuminate\Queue\Events\JobFailed;
 
-class Notification extends Notification
+class Notification extends LaravelNotification
 {
-     use Queueable;
+    use Queueable;
 
-     protected $event;
+    /**
+     * @var mixed
+     */
+    protected $event;
 
-
-     public function setEvent(JobFailed $event){
+    /**
+     * @param JobFailed $event
+     * @return mixed
+     */
+    public function setEvent(JobFailed $event)
+    {
 
         $this->event = $event;
 
         return $this;
-     }
+    }
 
-     public function via($notifiable){
-
+    /**
+     * @param $notifiable
+     */
+    public function via($notifiable)
+    {
         return ['slack'];
-     }
+    }
+    /**
+     * @return mixed
+     */
+    public function getEvent()
+    {
 
-     public function toSlack(){
+        return $this->event;
+    }
+    /**
+     * @param $notifiable
+     */
+    public function toSlack($notifiable)
+    {
 
-            return (new SlackMessage)
-                    ->error()
-                    ->content('A job failed at ' . config('app.url'))
-                    ->attachment(function (SlackAttachment $attachment) {
-                        $attachment->fields([
-                            'Exception message' => $this->event->exception->getMessage(),
-                            'Job class'         => $this->event->job->resolveName(),
-                            'Job body'          => $this->event->job->getRawBody(),
-                            'Exception'         => $this->event->exception->getTraceAsString(),
-                        ]);
-                    });
-     }
+        return (new SlackMessage)
+            ->success()
+            ->content('A job is failing 23 service provider LEOOOOOOOOOOOOOOOOOOOOOOO');
+    }
 
 }
