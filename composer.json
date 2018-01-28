@@ -1,6 +1,6 @@
 {
     "autoload":{
 
-        "Leo":"src"
+        "Leo\\DroidJobMonitor":"src"
     }
 }
