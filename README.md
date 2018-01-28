@@ -49,13 +49,6 @@ return [
 ## Configuration
 
 
-### Customizing the notification
-
-The default notification class provided by this package has support for mail and Slack.
-
-If you want to to customize the notification you can specify your own notification class in the config file.
-
-
 ## Usage
 
 If you configured web-hook url correctly. You'll receive a notification when a queued job fails.
