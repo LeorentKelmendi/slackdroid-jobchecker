@@ -1,4 +1,13 @@
 {
+    "name": "leo/slackdroid",
+    "description": "Slack boot to send a notification to a slack web-hook whenever a job fails.",
+    "license": "",
+    "authors": [
+        {
+            "name": "Leorent Kelmendi",
+            "email": "leorent@provideit.se"
+        }
+    ],
     "autoload":{
 
         "Leo\\DroidJobMonitor":"src/"
