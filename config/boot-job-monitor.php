@@ -3,6 +3,7 @@
 /*
  * The channels web-hook to which the notification will be sent.
  */
+
 return [
 
     'slack' => [
