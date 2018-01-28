@@ -29,8 +29,7 @@ php artisan vendor:publish --provider="Leo\DroidJobMonitor\BootJobMonitorService
 
 After vendor publish a new file will be generated under `config` folder, named `boot-job-monitor.php` that contains slack web-hook url provided through env file.
 
-```<?php
-
+```?php
 /*
  * The channels web-hook to which the notification will be sent.
  */
@@ -43,7 +42,6 @@ return [
 ]
 
 ?>
-
 ```
 
 ## Configuration
