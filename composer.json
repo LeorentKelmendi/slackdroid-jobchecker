@@ -1,13 +1,24 @@
 {
     "name": "leo/slackdroid",
     "description": "Slack boot to send a notification to a slack web-hook whenever a job fails.",
+     "keywords": ["library", "failed", "jobs", "slack", "notification", "error"],
     "license": "",
     "authors": [
         {
             "name": "Leorent Kelmendi",
-            "email": "leorent@provideit.se"
+            "homepage": "https://github.com/LeorentKelmendi",
+            "role": "Developer"
         }
     ],
+     "require": {
+        "php" : "^7.0",
+        "illuminate/contracts": "~5.5.0",
+        "illuminate/queue": "~5.5.0",
+        "illuminate/notifications": "~5.5.0",
+        "illuminate/support": "~5.5.0",
+        "guzzlehttp/guzzle": "^6.3"
+
+      },
     "autoload":{
 
         "Leo\\DroidJobMonitor":"src/"
@@ -16,7 +27,8 @@
     "laravel": {
         "providers": [
             "Leo\\DroidJobMonitor\\BootJobMonitorServiceProvider"
-        ],
+        ]
 
     }
+ }
 }
