@@ -1,6 +1,5 @@
 # Get a slack notification when a job fails.
 
-[![Latest Version on Packagist](URL)
 
 
 This package sends notifications to a slack web-hook if a queued job fails. It leverages [Laravel 5.5 notification capabilities](https://laravel.com/docs/5.5/notifications).
